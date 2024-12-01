@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Professional CV</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+    rel="stylesheet"
+  />
+  <style>
+    .hidden {
+      display: none;
+    }
+
+    .active {
+      background-color: #2563eb;
+      color: #fff;
+    }
+
+    .progress-bar {
+      height: 8px;
+      border-radius: 4px;
+      background-color: #e5e7eb;
+      overflow: hidden;
+      margin-top: 4px;
+    }
+
+    .progress-bar-inner {
+      height: 100%;
+      border-radius: 4px;
+    }
+  </style>
+  <script defer>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('.section');
+      const buttons = document.querySelectorAll('nav button');
+
+      sections.forEach(section => section.classList.add('hidden'));
+      buttons.forEach(button => button.classList.remove('active'));
+
+      document.getElementById(sectionId).classList.remove('hidden');
+      document.querySelector(`[data-section="${sectionId}"]`).classList.add('active');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      showSection('about');
+    });
+  </script>
+</head>
+<body class="bg-gray-50 min-h-screen">
+  <div class="container mx-auto p-8 bg-white rounded-lg shadow-md">
+    <!-- Header -->
+    <header class="text-center mb-8 relative">
+      <img src="https://via.placeholder.com/120" alt="Profile" class="w-32 h-32 rounded-full mx-auto border-4 border-white shadow-lg" />
+      <h1 class="text-2xl font-bold text-gray-800 mt-4">Mouadh Dhif</h1>
+      <p class="text-gray-600 text-lg">IT Professional | UX/UI Designer</p>
+      <div class="flex justify-center space-x-4 mt-4 text-gray-700">
+        <div class="flex items-center">
+          <span class="material-icons text-blue-600 mr-2">location_on</span>
+          <span>Kustinpolku 7 C 78, Helsinki, Finland</span>
+        </div>
+        <div class="flex items-center">
+          <span class="material-icons text-green-600 mr-2">phone</span>
+          <span>+358 44 970 3149</span>
+        </div>
+      </div>
+      <div class="mt-2 text-gray-700 flex justify-center items-center">
+        <svg class="w-6 h-6 text-purple-600 mr-2" fill="currentColor"><circle cx="12" cy="12" r="10"></circle></svg>
+        <a
+          href="https://www.behance.net/mouadhvitonen"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:text-purple-800 hover:underline"
+        >
+          Portfolio Available on Behance
+        </a>
+      </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="flex justify-center space-x-4 mb-8">
+      <button data-section="about" onclick="showSection('about')" class="active px-4 py-2 bg-gray-200 rounded-full">About Me</button>
+      <button data-section="experience" onclick="showSection('experience')" class="px-4 py-2 bg-gray-200 rounded-full">Professional Experience</button>
+      <button data-section="skills" onclick="showSection('skills')" class="px-4 py-2 bg-gray-200 rounded-full">Technical Skills</button>
+      <button data-section="languages" onclick="showSection('languages')" class="px-4 py-2 bg-gray-200 rounded-full">Languages & Certifications</button>
+      <button data-section="education" onclick="showSection('education')" class="px-4 py-2 bg-gray-200 rounded-full">Education</button>
+    </nav>
+
+    <!-- Sections -->
+    <main>
+      <!-- About Me -->
+<!-- About Me -->
+<section id="about" class="section">
+  <h2 class="text-xl font-bold mb-4">About Me</h2>
+  <p class="text-gray-700">
+    I am a dedicated IT professional with a comprehensive background in UX/UI design, programming, and technology. My journey began in Tunisia, where I developed a deep appreciation for problem-solving and creativity. Moving to Finland allowed me to expand my skill set in a multicultural environment, bridging cultural perspectives with technical expertise.
+  </p>
+  <p class="text-gray-700 mt-4">
+    My professional experience spans designing intuitive user interfaces, building functional and responsive web applications, and providing IT solutions for businesses. I thrive in environments that demand innovation, precision, and a user-centered approach. Passionate about creating meaningful digital experiences, I believe that design and technology should enhance lives, not complicate them.
+  </p>
+  <p class="text-gray-700 mt-4">
+    Beyond my technical abilities, I am highly adaptable, a fast learner, and a team player. I enjoy collaborating with others to solve complex problems and deliver results that exceed expectations. With a strong foundation in both technology and design, I am committed to contributing innovative solutions that push boundaries while remaining practical and user-friendly.
+  </p>
+  <p class="text-gray-700 mt-4">
+    In my free time, I explore emerging trends in technology, work on DIY projects, and sketch anime figures to relax. These hobbies not only fuel my creativity but also enhance my focus and problem-solving skills. I aim to continuously grow, both professionally and personally, while contributing to projects that make a positive impact.
+  </p>
+</section>
+
+
+      <!-- Professional Experience -->
+      <section id="experience" class="section hidden">
+        <h2 class="text-xl font-bold mb-4">Professional Experience</h2>
+        <div class="mb-4">
+          <h4 class="font-semibold">UX/UI Design Internship</h4>
+          <p class="text-gray-600">SDA Academy, Helsinki, Finland | 2022-2023</p>
+          <ul class="list-disc ml-6 text-gray-700">
+            <li>Developed user-centric design solutions</li>
+            <li>Created wireframes and interactive prototypes</li>
+            <li>Conducted user research and usability testing</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" class="section hidden">
+        <h2 class="text-xl font-bold mb-4">Technical Skills</h2>
+        <div class="border-l-4 border-blue-500 pl-4 mb-4">
+          <h4 class="font-semibold text-blue-600">Programming</h4>
+          <ul class="list-disc ml-6 text-gray-700">
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>React</li>
+          </ul>
+        </div>
+        <div class="border-l-4 border-green-500 pl-4 mb-4">
+          <h4 class="font-semibold text-green-600">Design Tools</h4>
+          <ul class="list-disc ml-6 text-gray-700">
+            <li>Figma</li>
+            <li>Adobe XD</li>
+            <li>Photoshop</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Languages & Certifications -->
+      <section id="languages" class="section hidden">
+        <h2 class="text-xl font-bold mb-4">Languages & Certifications</h2>
+        <h4 class="font-semibold">Languages</h4>
+        <ul class="mb-4">
+          <li>
+            <p>Arabic: Native</p>
+            <div class="progress-bar">
+              <div class="progress-bar-inner bg-blue-600" style="width: 100%;"></div>
+            </div>
+          </li>
+          <li>
+            <p>French: Native</p>
+            <div class="progress-bar">
+              <div class="progress-bar-inner bg-blue-600" style="width: 100%;"></div>
+            </div>
+          </li>
+          <li>
+            <p>Finnish: Fluent</p>
+            <div class="progress-bar">
+              <div class="progress-bar-inner bg-blue-500" style="width: 85%;"></div>
+            </div>
+          </li>
+          <li>
+            <p>English: Professional Working Proficiency</p>
+            <div class="progress-bar">
+              <div class="progress-bar-inner bg-blue-400" style="width: 80%;"></div>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Education -->
+      <section id="education" class="section hidden">
+        <h2 class="text-xl font-bold mb-4">Education</h2>
+        <div class="mb-4">
+          <h4 class="font-semibold">UX/UI Design Diploma</h4>
+          <p class="text-gray-600">SDA Academy, Finland | 2022-2023</p>
+          <p class="text-gray-700">
+            Comprehensive program covering user experience design, interface design, prototyping, and user research methodologies.
+          </p>
+        </div>
+        <div class="mb-4">
+          <h4 class="font-semibold">IT and Programming Studies</h4>
+          <p class="text-gray-600">Stadin Ammattiopisto, Helsinki | 2019-2020</p>
+          <p class="text-gray-700">Advanced coursework in programming languages, software development, and modern technological frameworks.</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center text-gray-500 mt-8">
+      © 2024 Mouadh Dhif | Professional CV | Last Updated: January 2024
+    </footer>
+  </div>
+</body>
+</html>
